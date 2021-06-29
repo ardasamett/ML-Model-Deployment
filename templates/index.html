@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Salary Predict </title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+
+<style>
+  a:link, a:visited {
+    background-color: #315e7c;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: #386a8b;
+  }
+  </style>
+
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Salary Predict</h1>
+
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="experience" placeholder="How many years of experience do you have?" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+    
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+   <br><br><br><br><br><br><br><br><br><br><br><br><br>
+   
+   
+
+   <p>@2021 | <a href="https://www.linkedin.com/in/ardasamet/">My Linkedin</a></p>
+ </div>
+
+
+</body>
+</html>
